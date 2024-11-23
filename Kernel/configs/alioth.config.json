@@ -1,0 +1,38 @@
+[
+  {
+    "kernelSource": {
+      "name": "alioth",
+      "repo": "https://github.com/kvsnr113/xiaomi_sm8250_kernel",
+      "branch": "main",
+      "device": "alioth",
+      "defconfig": "vendor/alioth_defconfig"
+    },
+    "toolchains": [
+      {
+        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/llvm-r536225/clang-r536225.tar.gz",
+        "name": "clang",
+        "binaryEnv": ["bin"]
+      },
+      {
+        "url": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+archive/refs/heads/android-msm-redbull-4.19-android14.tar.gz",
+        "name": "aarch64",
+        "binaryEnv": ["bin"]
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "ccache clang",
+      "externalCommands": {
+        "CLANG_TRIPLE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE": "aarch64-linux-android-"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true
+    },
+    "enableKernelSU": false,
+    "enableLXC": true
+  }
+  ]
