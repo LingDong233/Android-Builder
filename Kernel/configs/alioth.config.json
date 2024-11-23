@@ -9,14 +9,16 @@
     },
     "toolchains": [
       {
-        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/llvm-r536225/clang-r536225.tar.gz",
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/",
+        "branch": "llvm-r536225",
         "name": "clang",
-        "binaryEnv": ["bin"]
+        "binaryEnv": ["./clang-r536225/bin"]
       },
       {
-        "url": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+archive/refs/heads/android-msm-redbull-4.19-android14.tar.gz",
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+        "branch": "android-msm-redbull-4.19-android14",
         "name": "aarch64",
-        "binaryEnv": ["bin"]
+        "binaryEnv": ["./bin"]
       }
     ],
     "enableCcache": true,
