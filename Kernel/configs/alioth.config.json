@@ -2,14 +2,14 @@
   {
     "kernelSource": {
       "name": "alioth",
-      "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+      "repo": "https://github.com/raystef66/InfiniR_kernel_alioth",
       "branch": "15.0-alioth",
       "device": "alioth",
       "defconfig": "alioth_defconfig"
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
         "branch": "llvm-r536225",
         "name": "clang",
         "binaryEnv": ["./clang-r536225/bin"]
@@ -21,7 +21,7 @@
         "binaryEnv": ["./bin"]
       },
       {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/",
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9",
         "branch": "android-msm-redbull-4.19-android14",
         "name": "arm",
         "binaryEnv": ["./bin"]
