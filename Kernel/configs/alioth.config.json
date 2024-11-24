@@ -2,29 +2,35 @@
   {
     "kernelSource": {
       "name": "alioth",
-      "repo": "https://github.com/LineageOS/android_kernel_xiaomi_sm8250",
-      "branch": "lineage-21",
+      "repo": "https://github.com/kvsnr113/xiaomi_sm8250_kernel",
+      "branch": "main",
       "device": "alioth",
-      "defconfig": "vendor/xiaomi/alioth.config"
+      "defconfig": "vendor/alioth_defconfig"
     },
     "toolchains": [
       {
-        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
-        "branch": "llvm-r536225",
+        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
+        "branch": "18",
         "name": "clang",
-        "binaryEnv": ["./clang-r536225/bin"]
+        "binaryEnv": ["./bin"]
       },
       {
         "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
         "branch": "android-msm-redbull-4.19-android14",
         "name": "aarch64",
         "binaryEnv": ["./bin"]
+      },
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/",
+        "branch": "android-msm-redbull-4.19-android14",
+        "name": "arm",
+        "binaryEnv": ["./bin"]
       }
     ],
     "enableCcache": true,
     "params": {
       "ARCH": "arm64",
-      "CC": "ccache clang",
+      "CC": "clang",
       "externalCommands": {
         "CLANG_TRIPLE": "aarch64-linux-gnu-",
         "CROSS_COMPILE": "aarch64-linux-android-",
