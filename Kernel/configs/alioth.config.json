@@ -33,7 +33,7 @@
         "STRIP": "llvm-strip",
         "LLVM_AR": "llvm-ar",
         "LLVM_DIS": "llvm-dis",
-        "CONFIG_THINLTO": "y"
+        "CONFIG_THINLTO": ""
       }
     },
     "AnyKernel3": {
@@ -77,7 +77,7 @@
         "STRIP": "llvm-strip",
         "LLVM_AR": "llvm-ar",
         "LLVM_DIS": "llvm-dis",
-        "CONFIG_THINLTO": "y"
+        "CONFIG_THINLTO": ""
       }
     },
     "AnyKernel3": {
@@ -85,6 +85,6 @@
       "release": true
     },
     "enableKernelSU": false,
-    "enableLXC": false
+    "enableLXC": true
   }
 ]
