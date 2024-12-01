@@ -47,7 +47,7 @@
     "kernelSource": {
       "name": "alioth_lxc",
       "repo": "https://github.com/LingDong233/xiaomi_sm8250_kernel",
-      "branch": "main",
+      "branch": "lxc",
       "device": "alioth",
       "defconfig": "vendor/alioth-x_defconfig"
     },
