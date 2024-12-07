@@ -20,11 +20,13 @@
       "ARCH": "arm64",
       "CC": "clang",
       "externalCommands": {
-        "CROSS_COMPILE": "aarch64-linux-android-",
-        "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
+        "CROSS_COMPILE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+        "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
         "CLANG_TRIPLE": "aarch64-linux-gnu-",
         "LD": "ld.lld",
         "AR": "llvm-ar",
+        "AS": "llvm-as",
         "NM": "llvm-nm",
         "OBJCOPY": "llvm-objcopy",
         "OBJDUMP": "llvm-objdump",
@@ -33,6 +35,8 @@
         "STRIP": "llvm-strip",
         "LLVM_AR": "llvm-ar",
         "LLVM_DIS": "llvm-dis",
+        "LLVM": "1",
+        "LLVM_IAS":"1",
         "CONFIG_THINLTO": ""
       }
     },
