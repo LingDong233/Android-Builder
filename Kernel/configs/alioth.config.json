@@ -1,0 +1,50 @@
+[
+  {
+    "kernelSource": {
+      "name": "alioth",
+      "repo": "https://github.com/LingDong233/kernel_xiaomi_sm8250/",
+      "branch": "main",
+      "device": "alioth",
+      "defconfig": "alioth-x_defconfig"
+    },
+    "toolchains": [
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/",
+        "branch": "llvm-r536225",
+        "name": "clang",
+        "binaryEnv": ["./clang-r536225/bin"]
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "clang",
+      "externalCommands": {
+        "CROSS_COMPILE": "aarch64-linux-android-",
+        "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
+        "CLANG_TRIPLE": "aarch64-linux-gnu-",
+        "LD": "ld.lld",
+        "AR": "llvm-ar",
+        "NM": "llvm-nm",
+        "OBJCOPY": "llvm-objcopy",
+        "OBJDUMP": "llvm-objdump",
+        "READELF": "llvm-readelf",
+        "OBJSIZE": "llvm-size",
+        "STRIP": "llvm-strip",
+        "LLVM_AR": "llvm-ar",
+        "LLVM_DIS": "llvm-dis",
+        "CONFIG_THINLTO": ""
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "custom": {
+        "repo": "https://github.com/LingDong233/AnyKernel3/",
+        "branch": "main"
+        }
+    },
+    "enableKernelSU": false,
+    "enableLXC": true
+  }
+]
