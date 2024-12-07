@@ -5,7 +5,7 @@
       "repo": "https://github.com/LingDong233/kernel_xiaomi_sm8250/",
       "branch": "main",
       "device": "alioth",
-      "defconfig": "alioth-x_defconfig"
+      "defconfig": "alioth_defconfig"
     },
     "toolchains": [
       {
